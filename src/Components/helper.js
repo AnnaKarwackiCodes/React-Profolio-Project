@@ -4,22 +4,22 @@ import Preview from "@mui/icons-material/Preview";
 import Draw from "@mui/icons-material/Draw";
 import Face from "@mui/icons-material/Face";
 
-function setIcon(PageName){
+function setIcon(PageName, size='small'){
     switch (PageName) {
         case "Development":
-          return <Code/>;
+          return <Code fontSize={size}/>;
           break;
         case "Design":
-          return <Preview/>;
+          return <Preview fontSize={size}/>;
           break;
         case "Art":
-          return <Draw/>;
+          return <Draw fontSize={size}/>;
           break;
         case "About":
-          return <Face/>;
+          return <Face fontSize={size}/>;
           break;
         default:
-          return <Home/>;
+          return <Home fontSize={size}/>;
           break;
       }
   }

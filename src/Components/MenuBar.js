@@ -8,6 +8,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import Stack from "@mui/material/Stack";
 import { setIcon } from './helper';
+import Menu from "@mui/icons-material/Menu";
 
 export default function MenuBar({setCurrentPage, optionList}){
     const [open, setOpen] = React.useState(false);
@@ -22,14 +23,14 @@ export default function MenuBar({setCurrentPage, optionList}){
     }
 
     const MenuList = (
-        <Box sx={{width: 200}} role="presentation" onClick={() => {OpenMenu(false);}}>
+        <Box sx={{width: 200}} role="presentation" anchor={"left"} onClick={() => {OpenMenu(false);}}>
             <List>
                 {optionList.map((text) => (
                     <ListItem key={text}>
                         <ListItemButton onClick={()=>{setPage(text)}}>
-                            <Stack direction={"row"}>
+                            <Stack direction={"row"} spacing={2}>
                                 {setIcon(text)}
-                                <ListItemText primary={text}/>
+                                <ListItemText primary={text} marginLeft={'15px'}/>
                             </Stack>
                         </ListItemButton>
                     </ListItem>
@@ -39,8 +40,8 @@ export default function MenuBar({setCurrentPage, optionList}){
     )
     return (
         <Box>
-            <Button onClick={()=> {OpenMenu(!open)}}>Menu</Button>
-            <Drawer open={open} onClose={() => {OpenMenu(false);}}>
+            <Button onClick={()=> {OpenMenu(!open)}}><Menu/></Button>
+            <Drawer open={open} onClose={() => {OpenMenu(false);}} variant="persistent">
                 {MenuList}
             </Drawer>
         </Box>

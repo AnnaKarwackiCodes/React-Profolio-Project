@@ -22,7 +22,7 @@ export default function ImageTextComponent({
           width={'90%'}
         />
       </Box>
-      <Box alignItems={"center"} backgroundColor={"pink"} width={"50%"}>
+      <Box alignItems={"center"} width={"50%"}>
         <Box padding={'5%'}>
         <Typography width={'90%'} fontSize={'2rem'}>{Title}</Typography>
         <Typography width={'90%'} fontSize={'1.25rem'}>{Text}</Typography>
