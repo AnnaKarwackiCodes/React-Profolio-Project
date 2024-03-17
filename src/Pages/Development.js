@@ -23,7 +23,7 @@ export default function Development({setCurrentPage}) {
         AltText={"photo to preview some of the projects that will be seen"}
         Title={"My Development Experience"}
         Text={
-          "I currently work as a software engineer for the company Turnaround Factor. Here I work fully remotely on a communication application that adds AR capabilities, PDF viewing, CAD Model viewing and interactions, and external tool readings to a video call session. On this project I am solely responsibly for the development of the iOS application and the AR features. Daily I am working with React Native, Node.js, AR Foundation, and Unity. On the more difficult days I will work with Obejctive-C."
+          "I currently work as a software engineer for the company Turnaround Factor. Here I work fully remotely on a communication application that adds AR capabilities, PDF viewing, CAD Model viewing and interactions, and external tool readings to a video call session. \n\nOn this project I am solely responsibly for the development of the iOS application and the AR features. Daily I am working with React Native, Node.js, AR Foundation, and Unity. On the more difficult days I will work with Obejctive-C."
         }
         ImageWidth={"90%"}
       />
@@ -33,11 +33,11 @@ export default function Development({setCurrentPage}) {
         AltText={"a gif of gameplay for the game Don't Spend Time On It"}
         Title={"Don't Spend Time On It"}
         Text={
-          "Designed with the theme of \"Everyday Hero\". Two person team, roles on project was co-designer and sole developer. Inspired by the games: Diner Dash and Typing of the Dead, \"Don't Spend Time On It\" is a two player game where one player is playing as a professor and the other is playing as the TA. The professor's goal is to type the words that appear on the board behind them, the TA's job is to run around the classroom and gather as many words as they can for the professor to type. Putting more of the same word up on the board awards more points. Made during RIT's Hero Jam Fall 2017 and awarded Best Game."
+          "Designed with the theme of \"Everyday Hero\". Two person team, roles on project was co-designer and sole developer. Inspired by the games: Diner Dash and Typing of the Dead, \"Don't Spend Time On It\" is a two player game where one player is playing as a professor and the other is playing as the TA. \n\nThe professor's goal is to type the words that appear on the board behind them, the TA's job is to run around the classroom and gather as many words as they can for the professor to type. Putting more of the same word up on the board awards more points. \n\nMade during RIT's Hero Jam Fall 2017 and awarded Best Game."
         }
         ImageWidth={"90%"}
         CallToActionName={'View Github'}
-        ActionToCall={()=>{}}
+        ActionToCall={()=>{window.open("https://github.com/AnnaKarwackiCodes/Hero-Jam-2017/tree/master", "_blanks")}}
       />
       <ImageTextComponent
         ImageLeft={true}
@@ -49,7 +49,7 @@ export default function Development({setCurrentPage}) {
          }
         ImageWidth={"90%"}
         CallToActionName={'Visit Nintendo eShop'}
-        ActionToCall={()=>{}}
+        ActionToCall={()=>{window.open("https://www.nintendo.com/us/store/products/the-original-mobile-games-switch/", "_blanks")}}
       />
       <ImageTextComponent
         ImageLeft={false}
@@ -59,7 +59,7 @@ export default function Development({setCurrentPage}) {
         Text={"Six person team. Responsibilities on project include: project management, development lead, and VR implementation. Was displayed at RIT's annual Imagine RIT."}
         ImageWidth={"90%"}
         CallToActionName={'View Github'}
-        ActionToCall={()=>{}}
+        ActionToCall={()=>{window.open("https://github.com/AnnaKarwackiCodes/ProjectCyberB", "_blanks")}}
       />
       <TextBlock Title={'This Website'} Body={'Using React to build the website itself, utilizing libraries such as Material UI to assist in building the UI of the site. Deployed the website using AWS services. Built out individual components that could be used again and again to make developing this website quicker.'}/>
 

@@ -24,7 +24,7 @@ export default function Infocards({ Title, Infolist, ActionFunction, FunctionNam
     const detailList = Infolist.Categories;
   return (
     <Card variant="outlined">
-      <Box>
+      <Box padding={'5%'}>
         <CardContent>
           <Stack direction={'row'}>
             {setIcon(Title, 'large')}

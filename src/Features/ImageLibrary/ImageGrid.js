@@ -19,11 +19,11 @@ export default function ImageGrid({
   const handleClose = () => setOpen(false);
 
   return (
-    <Box>
+    <Box width={"90%"} padding={"2%"} height={"100%"}>
       <ImageList
         sx={{ width: Width, height: Height }}
         cols={ColumnCount}
-        rowHeight={164}
+        rowHeight={350}
       >
         {MediaList.map((item) => (
           <Box>
@@ -34,20 +34,24 @@ export default function ImageGrid({
                 setCurrentImage(item);
               }}
             >
-              <ImageListItem key={item.filePath}>
-                <img
-                  srcSet={item.filePath}
-                  src={item.filePath}
-                  alt={item.altText}
-                  loading="lazy"
-                />
+              <ImageListItem key={item.filePath} sx={{ width: '200px', objectFit: "contain" }}>
+              <img
+                    srcSet={item.filePath}
+                    src={item.filePath}
+                    alt={item.altText}
+                    loading="lazy"
+                  />
                 <ImageListItemBar title={item.name} position="below" />
               </ImageListItem>
             </Button>
           </Box>
         ))}
       </ImageList>
-      <ImageViewer CurrentImage={currentImage} open={open} handleClose={handleClose} />
+      <ImageViewer
+        CurrentImage={currentImage}
+        open={open}
+        handleClose={handleClose}
+      />
     </Box>
   );
 }

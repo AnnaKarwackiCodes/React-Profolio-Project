@@ -34,7 +34,7 @@ export default function ImageTextComponent({
           <Typography width={"90%"} fontSize={"2rem"}>
             {Title}
           </Typography>
-          <Typography width={"90%"} fontSize={"1.25rem"}>
+          <Typography style={{whiteSpace: 'pre-line'}} width={"90%"} fontSize={"1.25rem"}>
             {Text}
           </Typography>
           {CallToActionName && (

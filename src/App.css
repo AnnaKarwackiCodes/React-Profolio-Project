@@ -32,6 +32,10 @@
   display: none;
 }
 
+.css-1js5ogp-MuiImageList-root{
+  height: auto!important;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
