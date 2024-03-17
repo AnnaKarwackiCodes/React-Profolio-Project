@@ -6,6 +6,7 @@ import Design from '../Pages/Design';
 import Art from '../Pages/Art';
 import MenuBar from '../Components/MenuBar'
 import Homepage from '../Pages/Homepage';
+import Footer from '../Components/Footer';
 
 export default function Navigator(){
     const [CurrentScreen, setCurrentScreen] = React.useState('Homepage');
@@ -33,9 +34,10 @@ export default function Navigator(){
         };
     },[CurrentScreen]);
     return (
-        <Box>
-            <MenuBar setCurrentPage={setCurrentScreen} optionList={menuList}/>
+        <Box width={'100%'}>
+            <MenuBar setCurrentPage={setCurrentScreen} CurrentScreen={CurrentScreen} optionList={menuList}/>
             {CurrentView }
+            <Footer/>
         </Box>
     );
 }

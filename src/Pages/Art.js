@@ -51,9 +51,8 @@ export default function Art() {
   return (
     <Box>
         <TitleBar PageName={"Art"}/>
-      <Typography>Art</Typography>
-      <ImageTextComponent ImageLeft={true} ImagePath={require("../Media/Images/art.png")} AltText={'this is a test'} Title ={'Test'} Text={'this is the test for this specific component.'}/>
-      <ImageTextComponent ImageLeft={false} ImagePath={require("../Media/Images/art.png")} AltText={'this is a test'} Text={'this is the test for this specific component.'}/>
+      <ImageTextComponent ImageLeft={true} ImagePath={require("../Media/Images/art.png")} AltText={'this is a test'} Title ={'Test'} Text={'this is the test for this specific component.'} ImageWidth={"100%"}/>
+      <ImageTextComponent ImageLeft={false} ImagePath={require("../Media/Images/art.png")} AltText={'this is a test'} Text={'this is the test for this specific component.'} ImageWidth={"100%"}/>
       <ImageGrid MediaList={mediaList} ColumnCount={4}/>
     </Box>
   );
