@@ -20,7 +20,7 @@ infolist
     ]
 }
 */
-export default function Infocards({ Title, Infolist }) {
+export default function Infocards({ Title, Infolist, ActionFunction, FunctionName }) {
     const detailList = Infolist.Categories;
   return (
     <Card variant="outlined">
@@ -40,11 +40,12 @@ export default function Infocards({ Title, Infolist }) {
         <CardActions>
           <Button
             size="small"
+            variant="contained"
             onClick={() => {
-              
+                ActionFunction();
             }}
           >
-            Learn More
+            {FunctionName}
           </Button>
         </CardActions>
       </Box>

@@ -8,7 +8,7 @@ import TextBlock from "../Components/TextBlock";
 import Stack from "@mui/material/Stack";
 import Infocards from "../Components/Infocards";
 
-export default function Homepage() {
+export default function Homepage({setCurrentPage}) {
   const bannerImage = {
     filePath: require("../Media/Images/linkedin-header.png"),
     name: "Header Image",
@@ -82,9 +82,9 @@ const artCard = [
         Width={"90%"}
       />
       <Stack direction={'row'} spacing={3} paddingLeft={'5%'} paddingRight={'5%'} paddingTop={'2.5%'} paddingBottom={'2.5%'}>
-        <Infocards Title={'Development'} Infolist={devCard}/>
-        <Infocards Title={'Design'} Infolist={designCard}/>
-        <Infocards Title={'Art'} Infolist={artCard}/>
+        <Infocards Title={'Development'} Infolist={devCard} ActionFunction={()=>{setCurrentPage('Development')}} FunctionName={'Learn More'}/>
+        <Infocards Title={'Design'} Infolist={designCard} ActionFunction={()=>{setCurrentPage('Design')}} FunctionName={'Learn More'}/>
+        <Infocards Title={'Art'} Infolist={artCard} ActionFunction={()=>{setCurrentPage('Art')}} FunctionName={'Learn More'}/>
       </Stack>
 
       <ImageTextComponent
@@ -97,7 +97,7 @@ const artCard = [
         }
         ImageWidth={"60%"}
         CallToActionName={'Contact Me'}
-        ActionToCall={()=>{}}
+        ActionToCall={()=>{setCurrentPage('About')}}
       />
     </Box>
   );
