@@ -62,43 +62,6 @@ const artCard = [
 
   return (
     <Box>
-      <TitleBar PageName={"Welcome!"} />
-      <Banner Image={bannerImage} />
-      <ImageTextComponent
-        ImageLeft={false}
-        ImagePath={require("../Media/Images/picture-of-me.jpg")}
-        AltText={"photo of anna karwacki for intro section of the homepage"}
-        Title={"Hi There!"}
-        Text={
-          "Thanks for stopping by, my name is Anna Karwacki. I am a software developer during the day, but during my free time I love creating things. Whether that is through development, art, design, or playing D&D with my friends."
-        }
-        ImageWidth={"60%"}
-      />
-      <TextBlock
-        Title={"Quick Overview of What I Can Do"}
-        Body={
-          "I work as a Software engineer on an AR communication application for the Apple iPad. Daily I work with React Native, Unity, AR Foundation and where Javascript cannot get the job done: Objective-C."
-        }
-        Width={"90%"}
-      />
-      <Stack direction={'row'} spacing={3} paddingLeft={'5%'} paddingRight={'5%'} paddingTop={'2.5%'} paddingBottom={'2.5%'}>
-        <Infocards Title={'Development'} Infolist={devCard} ActionFunction={()=>{setCurrentPage('Development')}} FunctionName={'Learn More'}/>
-        <Infocards Title={'Design'} Infolist={designCard} ActionFunction={()=>{setCurrentPage('Design')}} FunctionName={'Learn More'}/>
-        <Infocards Title={'Art'} Infolist={artCard} ActionFunction={()=>{setCurrentPage('Art')}} FunctionName={'Learn More'}/>
-      </Stack>
-
-      <ImageTextComponent
-        ImageLeft={true}
-        ImagePath={require("../Media/Images/creation-gif.gif")}
-        AltText={"photo of anna karwacki for intro section of the homepage"}
-        Title={"Now you got a little bit of an idea of what I can do:"}
-        Text={
-          "Take a look at more of what I've made or contact me if you want to talk more about what I have worked on. "
-        }
-        ImageWidth={"60%"}
-        CallToActionName={'Contact Me'}
-        ActionToCall={()=>{setCurrentPage('About')}}
-      />
     </Box>
   );
 }
