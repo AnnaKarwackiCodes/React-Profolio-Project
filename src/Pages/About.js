@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import PDFViewer from "../Features/PDF/PDFViewer";
-import resumePDF from "../Media/PDF/AnnaKarwacki-Resume2024.pdf";
+
 import TitleBar from "../Components/TitleBar";
 import Banner from "../Components/Banner";
 import ImageTextComponent from "../Components/ImageTextComponet";
@@ -21,6 +21,8 @@ export default function About({ setCurrentPage }) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  const resumePDF =  "https://karwacki-portfolio-bucket.s3.us-east-2.amazonaws.com/PDF/AnnaKarwacki-Resume2024.pdf";
   return (
     <Box>
       <TitleBar PageName={"About"} />

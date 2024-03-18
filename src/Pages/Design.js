@@ -4,18 +4,22 @@ import Typography from "@mui/material/Typography";
 import TitleBar from "../Components/TitleBar";
 import Banner from "../Components/Banner";
 import ImageTextComponent from "../Components/ImageTextComponet";
-import medNotesPDF from "../Media/PDF/Med-game-UI-notes.pdf";
-import UWSheetPDF from "../Media/PDF/UnchartedWorld-CharacterSheet.pdf";
-import TASheetPDF from "../Media/PDF/TriangleAgency.pdf";
 import PDFModal from "../Features/PDF/PDFModal";
 
 export default function Design({ setCurrentPage }) {
   const [CurrentPDF, setCurrentPDF] = React.useState(null);
-  const [PDFWidth, setPDFWidth] = React.useState('50%');
-  const [PDFAlignment, setPDFAlignment] = React.useState('20%');
+  const [PDFWidth, setPDFWidth] = React.useState("50%");
+  const [PDFAlignment, setPDFAlignment] = React.useState("20%");
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  const medNotesPDF =
+    "https://karwacki-portfolio-bucket.s3.us-east-2.amazonaws.com/PDF/Med-game-UI-notes.pdf";
+  const UWSheetPDF =
+    "https://karwacki-portfolio-bucket.s3.us-east-2.amazonaws.com/PDF/UnchartedWorld-CharacterSheet.pdf";
+  const TASheetPDF =
+    "https://karwacki-portfolio-bucket.s3.us-east-2.amazonaws.com/PDF/TriangleAgency.pdf";
 
   const bannerImage = {
     filePath: require("../Media/Images/linkedin-header.png"),
@@ -51,7 +55,10 @@ export default function Design({ setCurrentPage }) {
         ImageWidth={"90%"}
         CallToActionName={"Download for Free"}
         ActionToCall={() => {
-            window.open("https://preview.drivethrurpg.com/en/product/229217/Null-Sector", "_blanks")
+          window.open(
+            "https://preview.drivethrurpg.com/en/product/229217/Null-Sector",
+            "_blanks"
+          );
         }}
       />
       <ImageTextComponent
@@ -66,10 +73,10 @@ export default function Design({ setCurrentPage }) {
         ImageWidth={"90%"}
         CallToActionName={"View Character Sheet"}
         ActionToCall={() => {
-            setPDFWidth('50%');
-            setPDFAlignment('20%');
-            setCurrentPDF(UWSheetPDF);
-            handleOpen();
+          setPDFWidth("50%");
+          setPDFAlignment("20%");
+          setCurrentPDF(UWSheetPDF);
+          handleOpen();
         }}
       />
       <ImageTextComponent
@@ -84,10 +91,10 @@ export default function Design({ setCurrentPage }) {
         ImageWidth={"90%"}
         CallToActionName={"View Character Sheet"}
         ActionToCall={() => {
-            setPDFWidth('50%');
-            setPDFAlignment('20%');
-            setCurrentPDF(TASheetPDF);
-            handleOpen();
+          setPDFWidth("50%");
+          setPDFAlignment("20%");
+          setCurrentPDF(TASheetPDF);
+          handleOpen();
         }}
       />
       <ImageTextComponent
@@ -101,8 +108,8 @@ export default function Design({ setCurrentPage }) {
         ImageWidth={"90%"}
         CallToActionName={"View Design Notes"}
         ActionToCall={() => {
-            setPDFWidth('75%');
-            setPDFAlignment('12%');
+          setPDFWidth("75%");
+          setPDFAlignment("12%");
           setCurrentPDF(medNotesPDF);
           handleOpen();
         }}

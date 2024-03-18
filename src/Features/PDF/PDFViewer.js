@@ -12,10 +12,15 @@ import Link from "@mui/material/Link";
 export default function PDFViewer({ filePath }) {
   const [numPages, setNumPages] = React.useState();
   const [pageNumber, setPageNumber] = React.useState(1);
+  const [myPath, setMyPath] = React.useState(filePath);
 
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
   }
+
+  React.useEffect(() => {
+    setMyPath(filePath);
+  },[filePath]);
 
   const pageInteraction = (
     <Box width={"100%"} padding={"1%"}>
@@ -69,7 +74,7 @@ export default function PDFViewer({ filePath }) {
         Download
       </Button>
       {pageInteraction}
-      <Document file={filePath} onLoadSuccess={onDocumentLoadSuccess}>
+      <Document file={myPath} onLoadSuccess={onDocumentLoadSuccess}>
         <Page
           size="A4"
           pageNumber={pageNumber}
