@@ -81,7 +81,7 @@ const artCard = [
         }
         Width={"90%"}
       />
-      <Stack direction={'row'} spacing={3} paddingLeft={'5%'} paddingRight={'5%'} paddingTop={'2.5%'} paddingBottom={'2.5%'}>
+      <Stack direction={{xs:'column',md:'row'}} spacing={3} paddingLeft={'5%'} paddingRight={'5%'} paddingTop={'2.5%'} paddingBottom={'2.5%'}>
         <Infocards Title={'Development'} Infolist={devCard} ActionFunction={()=>{setCurrentPage('Development')}} FunctionName={'Learn More'}/>
         <Infocards Title={'Design'} Infolist={designCard} ActionFunction={()=>{setCurrentPage('Design')}} FunctionName={'Learn More'}/>
         <Infocards Title={'Art'} Infolist={artCard} ActionFunction={()=>{setCurrentPage('Art')}} FunctionName={'Learn More'}/>
