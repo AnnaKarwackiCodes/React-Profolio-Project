@@ -22,7 +22,7 @@ export default function About({ setCurrentPage }) {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const resumePDF =  "https://karwacki-portfolio-bucket.s3.us-east-2.amazonaws.com/PDF/AnnaKarwacki-Resume2024.pdf";
+  const resumePDF =  "https://karwacki-portfolio-bucket.s3.us-east-2.amazonaws.com/PDF/AnnaKarwacki-Resume2025.pdf";
   return (
     <Box>
       <TitleBar PageName={"About"} />
