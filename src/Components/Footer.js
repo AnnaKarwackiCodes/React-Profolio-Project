@@ -17,7 +17,7 @@ export default function Footer({}) {
     >
       <Stack direction={"row"}>
         <Typography sx={{ textAlign: "center", width: "100%" }}>
-          Developed and Designed by Anna Karwacki, Copyright 2024 Anna Karwacki,
+          Developed and Designed by Anna Karwacki, Copyright 2025 Anna Karwacki,
           All Rights Reserved
         </Typography>
         <Fab variant="extended" onClick={()=>{window.scrollTo(0, 0);}}>

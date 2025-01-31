@@ -11,6 +11,8 @@ import TextBlock from "../Components/TextBlock";
 import Infocards from "../Components/Infocards";
 import PDFModal from "../Features/PDF/PDFModal";
 
+import useScreenSize from "../Helpers/useScreenSize";
+
 export default function About({ setCurrentPage }) {
   const resumeCard = [
     {
@@ -22,6 +24,8 @@ export default function About({ setCurrentPage }) {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  const screenSize = useScreenSize();
+
   const resumePDF =  "https://karwacki-portfolio-bucket.s3.us-east-2.amazonaws.com/PDF/AnnaKarwacki-Resume2025.pdf";
   return (
     <Box>
@@ -32,7 +36,7 @@ export default function About({ setCurrentPage }) {
         AltText={"gif of a pixel art version of myself writing"}
         Title={"Behind the Curtain"}
         Text={
-          "Grew up in Maryland and went 6 hours north to go to college at the Rochester Institute of Technology where I graduated Fall of 2018 with a BS in Game Design and Development. \n\nI am currently working as a software engineer at Turnaround Factor. Over the past 6-ish years I have worked on a wild collection of projects at different companies: from porting a mobile game to the Nintendo Switch to building websites for companies in the Western New York Area to now making a video conferencing app with AR features."
+          "Grew up in Maryland and went 6 hours north to go to college at the Rochester Institute of Technology where I graduated Fall of 2018 with a BS in Game Design and Development. \n\nMost recently I was as a software engineer at Turnaround Factor. Over the past 6-ish years I have worked on a wild collection of projects at different companies: from porting a mobile game to the Nintendo Switch to building websites for companies in the Western New York Area to now making a video conferencing app with AR features.\n\n I am currently looking for new opportunities so if I seem like a fit for you please reach out."
         }
         ImageWidth={"50%"}
       />
@@ -57,7 +61,7 @@ export default function About({ setCurrentPage }) {
         }}
       />
       <Stack
-        direction={"row"}
+        direction={screenSize.width > 1050 ? "row" : "column"}
         spacing={3}
         paddingLeft={"5%"}
         paddingRight={"5%"}
